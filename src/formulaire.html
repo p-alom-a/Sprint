@@ -1,0 +1,56 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPRINT</title>
+  <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <div class="formulaire-page">
+    <img src="./imges/illustration2.png" alt="" class="illustration2">
+    <h1 class="description">Définissez 1 tâche <br>
+      à réaliser dans un délais court.</h1>
+      <div class="formulaire">
+        <h2 class="instruction">Qu’allez vous réaliser aujourd’hui ?</h2>
+        <input type="text" id="descriptionInput" placeholder="Décrivez la tâche que vous voulez accomplir"><br>
+        <h2 class="instruction">Définissez une durée</h2>
+        <div class="range-input">
+          <input type="range" min="0" max="60" value="0" >
+          <div class="value">0 min</div>
+        </div>
+        <a href="./countdown.html"><button id="add" class="btn"> C'est parti </button></a><br>
+      </div>    
+</div>
+
+  <script>
+   
+    const descriptionInput = document.querySelector("#descriptionInput");
+    const addButton = document.querySelector('#add');
+    const slider = document.querySelector(".range-input input"); 
+    const value = document.querySelector(".value");
+
+    addButton.addEventListener('click', addTask);
+    slider.addEventListener("input", slide)
+
+    function addTask() {
+      const description = descriptionInput.value;
+      localStorage.setItem('descriptionInput', description);
+    }
+
+    function slide() {
+      value.textContent = `${slider.value}min`;
+      localStorage.setItem('value', slider.value); 
+    };
+
+  </script>
+</body>
+</html>

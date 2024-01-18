@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPRINT</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
+  
+    
+  <link rel="apple-touch-icon" sizes="180x180" href="./favIcon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favIcon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./favIcon/favicon-16x16.png">
+  <link rel="manifest" href="./favIcon/site.webmanifest">
+  <link rel="mask-icon" href="./favIcon/safari-pinned-tab.svg" color="#ffffff">
+  <meta name="msapplication-TileColor" content="#ece271">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  
+  <div class="first-part">
+    <img src="./imges/illustration.png" alt="" class="illustration">
+    <div class="top">
+      <img src="./imges/logoSprint.svg" alt="sprint"> 
+    </div>
+
+    <h1 class="description">Domptez la procrastination : <br>
+      effectuez les tâches que vous repoussez maintenant !</h1>
+      
+    <a href="./formulaire.html">
+        <button class="btn">Démarrer</button>
+    </a>
+    
+      
+  </div>
+
+
+ 
+  
+
+
+  
+
+  <script>
+   
+ 
+
+//  Idée avortée : button color
+     
+
+const button = document.querySelector('button');
+const body = document.querySelector('first-part');
+
+const colors = ["#F8B2F1", "#F2F8B2", "#8AFF9E"];
+let currentIndex = 0;
+
+function changeCouleur() {
+  body.style.backgroundColor = colors[currentIndex];
+  currentIndex++;
+
+  if (currentIndex > colors.length - 1) {
+    currentIndex = 0;
+  }
+}
+
+button.addEventListener('click', changeCouleur);
+
+
+// Illustration design B&W Freak Factory / storytale.io
+
+
+
+
+  </script>
+</body>
+</html>
