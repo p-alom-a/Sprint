@@ -144,7 +144,7 @@ function displayGif() {
     newTaskButton.innerText = 'Créer une nouvelle tâche';
     newTaskButton.className = 'btn';
     newTaskButton.style.position = 'absolute';
-    newTaskButton.style.top = '85%';  // Ajustez la position verticale selon vos préférences
+    newTaskButton.style.top = '85%';  
     newTaskButton.style.left = '50%';
     newTaskButton.style.transform = 'translateX(-50%)';
     newTaskButton.addEventListener('click', redirectToIndex);
@@ -155,7 +155,7 @@ function displayGif() {
   
   function redirectToIndex() {
     // Redirection vers l'index.html
-    window.location.href = 'index.html';
+    window.location.href = 'formulaire.html';
   
 }
 
